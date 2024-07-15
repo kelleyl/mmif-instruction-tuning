@@ -1,0 +1,17 @@
+Chyron:
+  - human: "This image is from a news video. Does the image contain a chyron?"
+    gpt: "yes"
+  - human: "Who is the person identified in this video frame?"
+    gpt: "Based on the chyron the person is: {{ OCR_RESULT }}"
+
+Slate:
+  - human: "This image is from a news video. Does this image contain production data such as air date, director, or other roles? yes or no"
+    gpt: "yes"
+  - human: "Transcribe the content of this image as key-value pairs in JSON format"
+    gpt: "{{ OCR_RESULT }}"
+
+Credits:
+  - human: "This image is from a news video. Does this image contain end credits?"
+    gpt: "yes"
+  - human: "List the names and roles shown in the credits."
+    gpt: "{{ OCR_RESULT }}"
